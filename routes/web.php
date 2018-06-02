@@ -10,18 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $tasks = [
-      'Go home',
-      'Do you work',
-      'learn More',
-      'Love Wa\'ed'
-    ];
-    return view('home' , compact('tasks'));
+Route::get('/welcome', function () {
+  return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/tasks', function () {
+    $tasks = DB::table('tasks')->get();
+    //return $tasks;
+    return view('tasks.index' , compact('tasks'));
+});
+
+Route::get('/tasks/{task}', function ($id) {
+    $tasks = DB::table('tasks')->find($id);
+    //dd($tasks);
+    return view('tasks.task' , compact('tasks'));
 });
