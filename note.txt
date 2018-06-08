@@ -1,0 +1,16 @@
+$ php artisan tinker ;
+
+>>> App\Task::all();
+// Get all the stored data
+
+>>> App\Task::where('id','>',2)->get();
+// Add where statment to the query
+
+>>> App\Task::pluck('task');
+// Get a spcefic field
+
+>>> App\Task::pluck('task')->first();
+// Get first Record
+
+>>> App\Task::find(1); || App\Task::first();
+//Get the first Record
