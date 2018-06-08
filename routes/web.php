@@ -11,17 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    $tasks = [
-      'Go home',
-      'Do you work',
-      'learn More',
-      'Love Wa\'ed'
-    ];
-    return view('home' , compact('tasks'));
-});
-
-
 Route::get('/welcome', function () {
-    return view('welcome');
+  return view('welcome');
 });
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('tasks','tasksController@index');
+Route::get('tasks/{task}','tasksController@show');

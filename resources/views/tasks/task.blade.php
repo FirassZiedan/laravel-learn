@@ -1,5 +1,5 @@
 <html>
   <body>
-    <h1>welcome To Homepage</h1>
+    <h1> {{ $tasks->task }}</h1>
   </body>
 </html>
