@@ -14,3 +14,26 @@ $ php artisan tinker ;
 
 >>> App\Task::find(1); || App\Task::first();
 //Get the first Record
+
+
+$ php artisan make:model Task -m
+// Create task model and migrate file once
+
+
+>>> $task = new App\Task ;
+//Create new object to insert new data to database
+
+>>> $task->task = "Task number One";
+//Insert data to task field
+
+>>> $task->save();
+// TO Save all data into database
+
+>>>App\Task::first()->task;
+// Get data from spacific field in object
+
+>>>App\Task::where('completed',0);
+// Get data where match the condition
+
+>>> App\Task::incomplete()->get();
+// Call funtion from modle 
