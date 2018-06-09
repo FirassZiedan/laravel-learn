@@ -21,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('tasks','tasksController@index');
 Route::get('tasks/{task}','tasksController@show');
+
+Route::get('posts', 'PostsController@index');
+Route::get('posts/{post}','PostsController@show');
