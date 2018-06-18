@@ -36,4 +36,17 @@ $ php artisan make:model Task -m
 // Get data where match the condition
 
 >>> App\Task::incomplete()->get();
-// Call funtion from modle 
+// Call funtion from modle
+
+layout.blade.php
+<body>
+  @yield(content);
+</body>
+
+*.blade.php
+@extends ('layout');
+
+@section ('content')
+ ...
+@endsection
+//create layout and set where the content should be apper
