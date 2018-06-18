@@ -20,6 +20,6 @@
     <nav class="nav d-flex justify-content-between">
       <a class="p-2 text-muted" href="#">Home</a>
       <a class="p-2 text-muted" href="#">Blog</a>
-      <a class="p-2 text-muted" href="#">Create Blog</a>
+      <a class="p-2 text-muted" href="/posts/create">Create Blog</a>
     </nav>
   </div>

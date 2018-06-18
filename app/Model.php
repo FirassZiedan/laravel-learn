@@ -13,6 +13,6 @@ class Model extends Eloquent
   //Excude spicific field from submiti
   // ex .
   // protected $guarded = ['user_id]; //Exsept all submited field without user_id field 
-  
+
   protected $guarded = [];
 }

@@ -3,6 +3,7 @@
 @section('content')
   <form method="POST" action="/posts">
     {{ csrf_field() }}
+
     <fieldset>
       <legend>Create Blog</legend>
       <br/>

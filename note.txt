@@ -50,3 +50,10 @@ layout.blade.php
  ...
 @endsection
 //create layout and set where the content should be apper
+
+
+//After Clone laravel Project you must 
+$ composer install;
+* copy .env.example to .env
+$ php artisan key:generate;
+$ php artisan migrate

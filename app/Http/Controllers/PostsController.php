@@ -9,11 +9,15 @@ use App\Post;
 class PostsController extends Controller
 {
     public function index () {
-      return view ('blog.index');
-    }
-    // public function show () {
 
-    // }
+      //$posts = Post::all();
+      $posts = Post::latest()->get();
+      //return $posts;
+      return view ('blog.index', compact('posts'));
+    }
+    public function show (Post $post) {
+      return view ('blog.show', compact('post'));
+    }
     public function create () {
       return view ('blog.create');
     }
@@ -31,6 +35,13 @@ class PostsController extends Controller
 
       //Way No.Two
       //Post::create (request(['title' , 'body'] ));
+       
+      //Form Validate
+      $this->validate(request(),[
+        'title' => 'required',
+        'body' => 'required'
+      ]);
+
       Post::create ([
         'title' => request('title'),
         'body' => request('body')
