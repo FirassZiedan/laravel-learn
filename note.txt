@@ -57,3 +57,14 @@ $ composer install;
 * copy .env.example to .env
 $ php artisan key:generate;
 $ php artisan migrate
+
+// Work With scss and js
+//you need to work with webpack.mix.js 
+//it's faster and cleaner to work 
+//also it's complie and compress the files
+$ npm  install // just in first time 
+
+//run npm run , Can read pachege.json
+$npm run dev
+Or
+$npm run watch 
