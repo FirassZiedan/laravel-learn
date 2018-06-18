@@ -24,3 +24,7 @@ Route::get('tasks/{task}','tasksController@show');
 
 Route::get('posts', 'PostsController@index');
 Route::get('posts/{post}','PostsController@show');
+
+Route::get('blogs', function(){
+  return view ('blog.index');
+});
