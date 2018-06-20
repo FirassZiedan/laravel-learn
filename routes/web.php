@@ -39,3 +39,5 @@ GET /posts/{id}         /open specific post
 PATCH /posts/{id}       /save the post after edit
 DELETE /posts/{id}      /delete post
 */
+
+Route::Post('posts/{post}/comments','CommentsController@store');
