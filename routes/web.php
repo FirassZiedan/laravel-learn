@@ -41,3 +41,10 @@ DELETE /posts/{id}      /delete post
 */
 
 Route::Post('posts/{post}/comments','CommentsController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
