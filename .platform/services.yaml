@@ -18,22 +18,3 @@ mysqldb:
                 default_schema: accounts
                 privileges:
                     accounts: admin
-memcached:
-    type: memcached:1.4
-#
-#rediscache:
-#    type: redis:3.2
-#
-
-solrsearch:
-    type: solr:6.6
-    disk: 1024
-    configuration:
-        cores:
-            maincore:
-                conf_dir: !archive "solr-conf/6.x"
-        endpoints:
-            main:
-                core: maincore
-
-
